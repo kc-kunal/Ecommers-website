@@ -6,6 +6,7 @@ function ProtectedRoute({ children }) {
   const { isSignedIn } = useUser();  // ✅ sahi check
 
   if (!isSignedIn) {
+    alert("Please login to access the cart.");
     return <Navigate to="/" />; // agar login nahi hai to redirect
   }
 
