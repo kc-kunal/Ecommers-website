@@ -87,10 +87,10 @@ function SingleProductPage() {
                 {singleProduct?.category.toUpperCase()} / {singleProduct.sku}
               </div>
               <p className="md:text-2xl text-xl font-bold text-red-500 flex gap-2 items-center">
-                ₹ {singleProduct.price}/-{" "}
+                $ {singleProduct.price}/-{" "}
                 <span className="line-through text-gray-700">
                   {" "}
-                  ₹
+                  $
                   {Math.round(
                     singleProduct.price +
                       (singleProduct.price * singleProduct.discountPercentage) /

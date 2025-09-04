@@ -37,7 +37,7 @@ function Cart({ location, getLocation }) {
                       <div>
                         <h1 className="md:w-[300px] w-[150px] line-clamp-2">{item.title}</h1>
                         <p className="text-red-500 font-bold md:text-xl ">
-                          ₹ {item.price}/-
+                          $ {item.price}/-
                         </p>
                       </div>
                     </div>
@@ -88,7 +88,7 @@ function Cart({ location, getLocation }) {
                       name="User Name"
                       type="text"
                       required
-                      defaultValue={user.fullName}
+                      defaultValue={user?.fullName}
                       placeholder="Name"
                       className="border p-2 rounded-md"
                     />
@@ -99,7 +99,7 @@ function Cart({ location, getLocation }) {
                     name="Address"
                       type="text"
                       required
-                      defaultValue={location.county}
+                      defaultValue={location?.county}
                       placeholder="Address"
                       className="border p-2 rounded-md"
                     />
@@ -112,7 +112,7 @@ function Cart({ location, getLocation }) {
                         type="text"
                         required
                         placeholder="State"
-                        defaultValue={location.state}
+                        defaultValue={location?.state}
                         className="border p-2 rounded-md w-40 md:w-full"
                       />
                     </div>
@@ -122,7 +122,7 @@ function Cart({ location, getLocation }) {
                         name="PostCode"
                         required
                         type="text"
-                        defaultValue={location.postcode}
+                        defaultValue={location?.postcode}
                         placeholder="PostCode"
                         className="border p-2 rounded-md w-40 md:w-full"
                       />
@@ -135,7 +135,7 @@ function Cart({ location, getLocation }) {
                         required
                         name="Country"
                         type="text"
-                        defaultValue={location.country}
+                        defaultValue={location?.country}
                         placeholder="Country"
                         className="border p-2 rounded-md w-40 md:w-full"
                       />
@@ -182,7 +182,7 @@ function Cart({ location, getLocation }) {
                     </span>{" "}
                     items Total
                   </h1>
-                  <p>₹{totalPrice}/-</p>
+                  <p>${totalPrice}/-</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <h1 className="flex items-center gap-1 text-gray-700">
@@ -192,7 +192,7 @@ function Cart({ location, getLocation }) {
                     Delivery Charge
                   </h1>
                   <p className="text-red-500 font-semibold">
-                    <span className="text-gray-700 line-through">₹33</span> Free
+                    <span className="text-gray-700 line-through">$33</span> Free
                   </p>
                 </div>
                 <div className="flex justify-between items-center">
@@ -202,14 +202,14 @@ function Cart({ location, getLocation }) {
                     </span>{" "}
                     Handling Charge
                   </h1>
-                  <p className="text-red-500 font-semibold">₹10</p>
+                  <p className="text-red-500 font-semibold">$10</p>
                 </div>
                 <hr className="text-gray-200 mt-2" />
                 <div className="flex justify-between items-center">
                   <h1 className="flex items-center gap-1 font-semibold text-lg  text-gray-700">
                     Grand Total
                   </h1>
-                  <p className="font-semibold">₹{totalPrice + 10}/-</p>
+                  <p className="font-semibold">${totalPrice + 10}/-</p>
                 </div>
                 <h1 className="font-semibold text-gray-700 mb-3 mt-7">
                   Apply Promo Code

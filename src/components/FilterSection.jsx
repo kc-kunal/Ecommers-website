@@ -14,29 +14,29 @@ function FilterSection({search,setSearch,category,setCategory,priceRange,setPric
         className="bg-white border-gray-200 border-2 rounded-md p-2"
       />
 
-      {/* // category only data  */}
-      <h1 className="mt-5 font-semibold text-xl">Category</h1>
-      <div className="flex flex-col gap-2 mt-5">
-        {categoryOnlyData?.map((item, index) => {
-          return (
-            <div key={index} className="flex gap-2">
-              <input type="checkbox" name={item} checked={category===item} value={item} onChange={handleCategoryChange} />
-              <button className="cursor-pointer uppercase">
-                {item}
-              </button>
-            </div>
-          );
-        })}
-      </div>
-       {/* // brand only data  */}
-      <h1 className="mt-5 font-semibold text-xl">Brand</h1>
-      <select className="mt-5 border-2 border-gray-200 p-2 rounded-md w-full" value={brand} onChange={handleBrandChange}>
-         {
-          brandOnlyData?.map((item,index)=>{
-            return <option key={index} value={item}>{item?.toUpperCase()}</option>
-          })
-         }
-      </select>
+        {/* // category only data  */}
+        <h1 className="mt-5 font-semibold text-xl">Category</h1>
+        <div className="flex flex-col gap-2 mt-5">
+          {categoryOnlyData?.map((item, index) => {
+            return (
+              <div key={index} className="flex gap-2">
+                <input type="checkbox" name={item} checked={category===item} value={item} onChange={handleCategoryChange} />
+                <button className="cursor-pointer uppercase">
+                  {item}
+                </button>
+              </div>
+            );
+          })}
+        </div>
+        {/* // brand only data  */}
+        <h1 className="mt-5 font-semibold text-xl">Brand</h1>
+        <select className="mt-5 border-2 border-gray-200 p-2 rounded-md w-full" value={brand} onChange={handleBrandChange}>
+          {
+            brandOnlyData?.map((item,index)=>{
+              return <option key={index} value={item}>{item?.toUpperCase()}</option>
+            })
+          }
+        </select>
 
       {/* its for range */}
       <h1 className="mt-5 font-semibold text-xl">Price Range</h1>

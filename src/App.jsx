@@ -67,7 +67,7 @@ useEffect(()=>{
         <Route path='/category/:category' element={<CategoryProducts/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route> {/* 👈 spelling fix */}
-        <Route path='/cart' element={<ProtectedRoute><Cart location={location} getLocation={getLocation}/></ProtectedRoute>}></Route>
+        <Route path='/cart' element={<Cart location={location} getLocation={getLocation}/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

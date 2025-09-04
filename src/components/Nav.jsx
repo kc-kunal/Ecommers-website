@@ -28,7 +28,8 @@ function Nav({ location,getLocation,openDropDown, setOpenDropDown }) {
         <div className="flex gap-7 items-center">
           <Link to={"/"}>
             <h1 className="font-bold text-3xl">
-              <span className="text-red-500 font-serif">A</span>nkita
+              <span className="text-red-500 font-serif">Z</span>eptro
+              
             </h1>
           </Link>
           <div className="md:flex gap-1 cursor-pointer items-center text-gray-700 hidden">
